@@ -1,0 +1,1289 @@
+.game {
+  max-width: 1550px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  background-color: #000;
+}
+
+.gameHeader {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.headerBg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.headerContentGame {
+  width: 450px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.headerContentGame .hearts,
+.texts {
+  height: 100%;
+}
+
+
+.texts {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.popupText {
+  color: #fff;
+  font-family: "YR";
+  padding-top: 0;
+  height: 100%;
+  text-align: center;
+}
+
+.texts .number,
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.texts .number {
+  width: 40%;
+  background-color: #DBA69A;
+  color: #000;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+.texts .text {
+  width: 60%;
+  background-color: #EEBFB1;
+  color: #000;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+
+.hearts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 25%;
+  height: 120px;
+  position: relative;
+  background-color: #EEBFB1;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.heart {
+  grid-row: span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart img {
+  max-width: 100%;
+  width: 26px;
+  height: 26px;
+}
+
+.heart.inactive img {
+  display: none;
+  /* Adjust opacity level as needed */
+}
+
+area[style*="rgba(0, 255, 0, 0.3)"] {
+  outline: 2px solid #00ff00;
+}
+
+.headerBgSmall {
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.boxNotificationChoice .correctBox {
+  background-color: #92C3A0;
+}
+
+@media screen and (max-width: 750px) {
+  .headerBg {
+    display: none;
+  }
+
+  .headerBgSmall {
+    display: block;
+  }
+
+  .headerContentGame {
+    width: 260px;
+    height: 46px;
+  }
+
+  .texts {
+    width: 40%;
+  }
+
+  .texts .text {
+    font-size: 0.8rem;
+  }
+
+  .texts .number {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hearts {
+    width: 32%;
+  }
+
+  .hearts img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .gameBtn {
+    width: 200px !important;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gameBtn {
+    width: 150px !important;
+    padding: 10px !important;
+    font-size: 1.1rem !important;
+  }
+}
+
+.gameContent {
+  max-width: 1550px;
+  width: 100%;
+  background-color: #000;
+  overflow: hidden;
+  margin: 10px 0 20px 0;
+}
+
+.gameBg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameBg img {
+  width: 1400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.gameBgSmall {
+  display: none;
+}
+
+.boxesBig {
+  display: none;
+}
+
+.gameBigBg {
+  display: none;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .gameContent {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  .gameBg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gameBg img {
+    width: 1200px;
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .popup .popupHeader {
+    width: 100%;
+    padding: 1px 0;
+    background-color: #d09686;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+  }
+
+  .popup .popupHeader p {
+    color: #fff;
+    font-family: "YB";
+  }
+
+  .popupText {
+    color: #fff;
+    font-family: "YR";
+    padding-top: 0;
+    height: 100%;
+    text-align: center;
+  }
+
+  .popup.active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .gameContent {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .gameBg {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .gameBg img {
+    width: 1400px;
+    height: 700px;
+  }
+
+  .boxesBig {
+    display: inline-block;
+    width: 1070px !important;
+    height: 100%;
+    z-index: 2;
+    background-color: inherit;
+    position: absolute;
+    padding: 2px;
+    background-color: yellow;
+  }
+
+  .boxesBigBox {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+  }
+
+  .boxesBigBox.boxesBigBox1 {
+    top: 120px !important;
+    left: 390px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox1 img {
+    width: 85px !important;
+    height: 85px !important;
+  }
+
+  .boxesBigBox.boxesBigBox2 {
+    width: 40px;
+    height: 40px;
+    top: 273px !important;
+    left: 388px !important;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox2 img {
+    width: 40px;
+    height: 60px;
+  }
+
+  .boxesBigBox.boxesBigBox3 {
+    width: 60px !important;
+    height: 60px !important;
+    top: 340px !important;
+    left: 415px !important;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox3 img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+
+  .boxesBigBox.boxesBigBox4 {
+    width: 60px !important;
+    height: 60px !important;
+    top: 300px !important;
+    left: 530px !important;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox4 img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .boxesBigBox.boxesBigBox5 {
+    width: 80px !important;
+    height: 90px !important;
+    top: 330px !important;
+    left: 595px !important;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox5 img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .boxesBigBox.boxesBigBox6 {
+    width: 105px !important;
+    height: 105px !important;
+    bottom: 95px !important;
+    left: 250px !important;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox6 img {
+    width: 105px !important;
+    height: 105px !important;
+  }
+
+  .boxesBigBox.boxesBigBox7 {
+    width: 75px !important;
+    height: 75px !important;
+    bottom: 45px !important;
+    left: 475px !important;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox7 img {
+    width: 75px !important;
+    height: 75px !important;
+  }
+
+  .boxesBigBox.boxesBigBox8 {
+    width: 65px !important;
+    height: 65px !important;
+    bottom: 145px !important;
+    left: 498px !important;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox8 img {
+    width: 65px !important;
+    height: 65px !important;
+  }
+
+  .boxesBigBox.boxesBigBox9 {
+    width: 75px !important;
+    height: 75px !important;
+    bottom: 240px !important;
+    right: 305px !important;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox9 img {
+    width: 75px !important;
+    height: 75px !important;
+  }
+
+  .popup.active {
+    height: 120px;
+  }
+
+}
+
+
+
+@media screen and (min-width: 400px) {
+  .gameContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gameBg {
+    position: relative;
+  }
+
+  .boxesBig {
+    display: inline-block;
+    width: 1040px;
+    height: 100%;
+    z-index: 2;
+    background-color: inherit;
+    position: absolute;
+    padding: 2px;
+  }
+
+  .boxesBigBox {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .boxesBigBox.boxesBigBox1 {
+    top: 100px;
+    left: 390px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox1.boxesBigBox1active {
+    opacity: 1;
+  }
+
+  .boxesBigBox.boxesBigBox1 img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .boxesBigBox.boxesBigBox2 {
+    width: 40px;
+    height: 40px;
+    top: 233px;
+    left: 388px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox2.boxesBigBox2active {
+    opacity: 1;
+  }
+
+  .boxesBigBox.boxesBigBox2 img {
+    width: 40px;
+    height: 60px;
+  }
+
+  .boxesBigBox.boxesBigBox3 {
+    width: 50px;
+    height: 50px;
+    top: 290px;
+    left: 420px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox3 img {
+    width: 50px;
+    height: 50px;
+  }
+
+
+
+
+  .boxesBigBox.boxesBigBox4 {
+    width: 60px;
+    height: 60px;
+    top: 250px;
+    left: 510px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox4 img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .boxesBigBox.boxesBigBox5 {
+    width: 50px;
+    height: 70px;
+    top: 290px;
+    left: 585px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox5 img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .boxesBigBox.boxesBigBox6 {
+    width: 85px;
+    height: 85px;
+    bottom: 90px;
+    left: 290px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox6 img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .boxesBigBox.boxesBigBox7 {
+    width: 65px;
+    height: 65px;
+    bottom: 45px;
+    left: 460px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox7 img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .boxesBigBox.boxesBigBox8 {
+    width: 55px;
+    height: 55px;
+    bottom: 125px;
+    left: 490px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox8 img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .boxesBigBox.boxesBigBox9 {
+    width: 65px;
+    height: 65px;
+    bottom: 205px;
+    right: 322px;
+    /* background-color: yellowgreen; */
+  }
+
+  .boxesBigBox.boxesBigBox9 img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .boxesBigBox.boxesBigBox3.boxesBigBox3active {
+    opacity: 1;
+  }
+
+  .boxesBigBox.boxesBigBox4.boxesBigBox4active {
+    opacity: 1;
+  }
+
+  .boxesBigBox.boxesBigBox5.boxesBigBox5active {
+    opacity: 1;
+  }
+
+  .boxesBigBox.boxesBigBox6.boxesBigBox6active {
+    opacity: 1;
+  }
+
+  .boxesBigBox.boxesBigBox7.boxesBigBox7active {
+    opacity: 1;
+  }
+
+  .boxesBigBox.boxesBigBox8.boxesBigBox8active {
+    opacity: 1;
+  }
+
+  .boxesBigBox.boxesBigBox9.boxesBigBox9active {
+    opacity: 1;
+  }
+
+  .popupLayer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    /* Ensure it is below BoxNotification */
+  }
+
+  .popupLayer.active {
+    display: block;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    width: 300px;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    color: #FFF;
+  }
+
+  .popupBtn {
+    width: 82%;
+    padding: 5px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+
+  .popup .popupHeader {
+    width: 100%;
+    padding: 1px 0;
+    background-color: #d09686;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+  }
+
+  .popup .popupHeader p {
+    color: #fff;
+    font-family: "YB";
+  }
+
+  .popupText {
+    color: #fff;
+    font-family: "YR";
+    height: 100%;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  .popup.active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gameContent {
+    max-width: 400px;
+    width: 100%;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  .gameBg {
+    display: none;
+  }
+
+  .gameBg img {
+    display: none;
+  }
+
+  .gameBgSmall {
+    object-fit: cover;
+    /* max-width: 400px; */
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: blue;
+    position: relative;
+  }
+
+
+  .popup .popupHeader {
+    width: 100%;
+    padding: 1px 0;
+    background-color: #d09686;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+  }
+
+  .popup .popupHeader p {
+    color: #fff;
+    font-family: "YB";
+  }
+
+  .popupText {
+    color: #fff;
+    font-family: "YR";
+    height: 100%;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .popup.active {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .boxsContainer {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+  }
+
+  .box {
+    width: 50px;
+    height: 50px;
+    background-color: #00ff00;
+    display: inline-block;
+  }
+
+  .box1 {
+    background-color: inherit;
+    position: absolute;
+    top: 210px;
+    left: 100px;
+    /* background-color: blueviolet; */
+  }
+
+  .box1 .box1img {
+    width: 60px;
+    height: 60px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box1active .box1img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+  .box2 {
+    background-color: inherit;
+    position: absolute;
+    top: 346px;
+    left: 205px;
+    /* background-color: blueviolet; */
+  }
+
+  .box2 .box2img {
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box2active .box2img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+
+  .box3 {
+    background-color: inherit;
+    position: absolute;
+    top: 380px;
+    left: 110px;
+    /* background-color: blueviolet; */
+  }
+
+  .box3 .box3img {
+    width: 45px;
+    height: 45px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box3active .box3img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+  .box4 {
+    width: 30px;
+    height: 30px;
+    background-color: inherit;
+    position: absolute;
+    top: 340px;
+    left: 100px;
+    /* background-color: blueviolet; */
+  }
+
+  .box4 .box4img {
+    width: 35px;
+    height: 35px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box4active .box4img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+  .box5 {
+    width: 60px;
+    height: 60px;
+    background-color: inherit;
+    position: absolute;
+    top: 520px;
+    left: 10px;
+    /* background-color: blueviolet; */
+  }
+
+  .box5 .box5img {
+    width: 55px;
+    height: 55px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box5active .box5img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+  .box6 {
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    position: absolute;
+    top: 570px;
+    left: 170px;
+    /* background-color: blueviolet; */
+  }
+
+  .box6 .box6img {
+    width: 55px;
+    height: 55px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box6active .box6img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+  .box7 {
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    position: absolute;
+    top: 490px;
+    left: 190px;
+    /* background-color: red; */
+  }
+
+  .box7 .box7img {
+    width: 60px;
+    height: 60px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box7active .box7img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+  .box8 {
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    position: absolute;
+    top: 370px;
+    left: 270px;
+    /* background-color: yellowgreen; */
+  }
+
+  .box8 .box8img {
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box8active .box8img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+  .box9 {
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    position: absolute;
+    top: 420px;
+    left: 340px;
+    /* background-color: grey; */
+  }
+
+  .box9 .box9img {
+    width: 55px;
+    height: 55px;
+    z-index: 3;
+    opacity: 0;
+    /* Set initial opacity to 0 */
+    transition: opacity 0.5s ease;
+    /* Add a transition for a smooth fade-in effect */
+  }
+
+  .box9active .box9img {
+    opacity: 1;
+    /* Set opacity to 1 when box1active class is present */
+  }
+
+
+
+  .gameBgSmall .bgSmallImg {
+    position: absolute;
+    content: "";
+    top: -120px;
+    left: 0;
+    width: 400px;
+  }
+
+  .popupLayer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .popupLayer.active {
+    display: block;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1000;
+    width: 200px;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+  }
+
+  .popupBtn {
+    width: 82%;
+    padding: 5px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+
+  .popup .popupHeader {
+    width: 100%;
+    padding: 1px 0;
+    background-color: #d09686;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .popup.active {
+    display: flex;
+  }
+}
+
+.gameFooter {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameBtn {
+  width: 250px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaaf9e;
+  color: #fff;
+  font-size: 1.4rem;
+  border-radius: 35px;
+  text-decoration: none;
+  /* Added text-decoration to remove underlines */
+}
+
+.gameBtn:hover {
+  color: #fff;
+  background-color: #d09686;
+}
+
+
+
+/* Replace placeholders with your actual colors */
+.appreciation-message {
+  position: fixed;
+  top: 213px;
+  /* 20px distance from the top */
+  left: 50%;
+  /* Center it horizontally */
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  /* Placeholder for your green background color */
+  color: #ffffff;
+  /* Placeholder for your white text color */
+  padding: 5px 15px;
+  /* Padding for content inside the div */
+  z-index: 1000;
+  /* Ensure it's above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a subtle box shadow */
+  animation: bounceIn 0.5s ease-out forwards;
+  /* Add smoother bouncing-in animation */
+  border-radius: 10px;
+  /* Add border-radius for a rounded appearance */
+}
+
+/* Optional: Add a transition for smooth appearance and disappearance */
+.appreciation-message-enter {
+  opacity: 0;
+  transform: translateY(-33px) scale(0.8);
+  /* Start slightly above the final position and with a smaller size */
+}
+
+.appreciation-message-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 500ms, transform 500ms;
+  /* Add transition for both opacity and transform */
+}
+
+.appreciation-message-exit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.appreciation-message-exit-active {
+  opacity: 0;
+  transform: translateY(-33px) scale(0.8);
+  /* Move slightly above the final position and with a smaller size during exit */
+  transition: opacity 300ms, transform 300ms;
+  /* Add transition for both opacity and transform */
+}
+
+/* Define the bouncing-in animation */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.warning-message {
+  position: fixed;
+  top: 213px;
+  /* 20px distance from the top */
+  left: 50%;
+  /* Center it horizontally */
+  transform: translateX(-50%);
+  background-color: red;
+  /* Placeholder for your green background color */
+  color: #ffffff;
+  /* Placeholder for your white text color */
+  padding: 5px 15px;
+  /* Padding for content inside the div */
+  z-index: 1000;
+  /* Ensure it's above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a subtle box shadow */
+  animation: bounceIn 0.5s ease-out forwards;
+  /* Add smoother bouncing-in animation */
+  border-radius: 10px;
+  /* Add border-radius for a rounded appearance */
+  font-size: .9rem;
+  color: #fff !important;
+  font-family: "YB";
+  font-weight: 700;
+}
+
+
+.popupText {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.popupText p {
+  font-size: .8rem;
+  font-family: "YR";
+  font-weight: 500;
+  color: #ffff;
+}
+
+@media screen and (max-width: 400px) {
+  .appreciation-message {
+    position: fixed;
+    top: 213px;
+    /* 20px distance from the top */
+    left: 30%;
+    /* Center it horizontally */
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    /* Placeholder for your green background color */
+    color: #ffffff;
+    /* Placeholder for your white text color */
+    padding: 5px 15px;
+    /* Padding for content inside the div */
+    z-index: 1000;
+    /* Ensure it's above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a subtle box shadow */
+    animation: bounceIn 0.5s ease-out forwards;
+    /* Add smoother bouncing-in animation */
+    border-radius: 10px;
+    /* Add border-radius for a rounded appearance */
+  }
+
+  .warning-message {
+    position: fixed;
+    top: 213px;
+    /* 20px distance from the top */
+    left: 20%;
+    /* Center it horizontally */
+    transform: translateX(-50%);
+    background-color: red;
+    /* Placeholder for your green background color */
+    color: #ffffff;
+    /* Placeholder for your white text color */
+    padding: 5px 15px;
+    /* Padding for content inside the div */
+    z-index: 1000;
+    /* Ensure it's above other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a subtle box shadow */
+    animation: bounceIn 0.5s ease-out forwards;
+    /* Add smoother bouncing-in animation */
+    border-radius: 10px;
+    /* Add border-radius for a rounded appearance */
+    font-size: .9rem;
+    color: #fff !important;
+    font-family: "YB";
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,131 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .logo {
+  min-width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginContent {
+  height: 100%;
+  min-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginForm {
+  width: 100%;
+  margin: 0 auto 20px auto;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+.loginForm input {
+  width: 96%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border-bottom: 2px solid #0094BF;
+  background-color: #EEEEEE;
+  padding: 18px 15px;
+  font-size: 1.5rem;
+
+}
+.loginForm input:nth-child(1) {
+  margin-bottom: 30px;
+}
+.error {
+  font-family: "YB";
+  font-size: .8rem;
+  padding: 0;
+  margin: 10px 0;
+  color: #0094BF;
+}
+::placeholder {
+  font-size: 1.5rem;
+  color: #7E7E7E;
+  font-family: "YR" !important;
+}
+
+.loginBtn {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "YR" !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0094BF;
+  border-radius: 5px;
+  padding: 15px 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.loginBtn:hover {
+  color: #fff;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .login .logo img{
+    width: 100%;
+    height: auto;
+  }
+    .loginContent {
+      width: 60%;
+    }
+    ::placeholder {
+      font-size: 1.2rem;
+    }
+    .loginBtn {
+      font-size: 1.2rem;
+    }
+    .login input {
+      width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .loginContent {
+    width: 80%;
+  }
+  ::placeholder {
+    font-size: 1rem;
+  }
+  .loginBtn {
+    font-size: 1rem;
+  }
+  .login input {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .loginContent {
+    width: 80%;
+  }
+  ::placeholder {
+    font-size: 1rem;
+  }
+  .loginBtn {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .login input {
+    width: 91%;
+  }
+}

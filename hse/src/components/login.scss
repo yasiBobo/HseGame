@@ -1,0 +1,618 @@
+@import "./variables.scss";
+
+// FONTS 
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/YekanBakhNormal.ttf");
+}
+
+@font-face {
+  font-family: "Yekan Bakh Bold";
+  src: url("./assets/fonts/YekanBakhBold.ttf");
+}
+
+// MAIN STYLES
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-family-primary; // Using the variable here
+  color: $text-color;
+}
+
+
+.App {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.app-container.login {
+  width: inherit;
+  background-color: $primary-white;
+  overflow: hidden !important;
+  padding: 0;
+}
+
+// LOGO 
+.userLogo {
+  width: 100px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.loginFormInput {
+  width: 300px;
+  padding: 15px 0;
+  border-radius: $btn-radius;
+  border: none;
+  outline: none;
+  direction: rtl;
+  background-color: $inputBg;
+  text-align: center;
+  font-family: $font-family-primary;
+  color: $input-text-color;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.loginFormInput:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Add a box-shadow effect when input is focused */
+}
+
+.loginButton {
+  width: 200px;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $btn-radius;
+  background-color: $light-blue;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 10px 0px rgba(167, 167, 167, 0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  color: $primary-white;
+  text-decoration: none;
+  font-size: $font-size-md;
+  text-decoration: none;
+  font-family: $font-family-primary;
+  /* Add a transition effect */
+}
+
+.loginButton a {
+  color: $primary-white;
+  text-decoration: none;
+  font-size: $font-size-md;
+  text-decoration: none;
+  font-family: $font-family-primary;
+}
+
+@import "./variables.scss";
+
+// ===== FONTS =====
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+}
+
+@font-face {
+  font-family: "Yekan Bakh";
+  src: url("./assets/fonts/YekanBakhNormal.ttf");
+}
+
+@font-face {
+  font-family: "Yekan Bakh Bold";
+  src: url("./assets/fonts/YekanBakhBold.ttf");
+}
+
+@font-face {
+  font-family: "Yekan Bold2X";
+  src: url("./assets/fonts/Yekan2XBold.ttf");
+}
+
+// ===== MAIN STYLES =====
+::-webkit-scrollbar {
+  width: 10px;
+  height: 20px !important;
+  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  /* Height of the scrollbar thumb */
+  background: #3498db;
+  /* Color of the scrollbar thumb */
+  border-radius: 5px;
+  /* Rounded corners of the scrollbar thumb */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-family-primary; // Ensure this variable is defined in variables.scss
+  color: $text-color; // Ensure this variable is defined in variables.scss
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  // overflow: hidden;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.app-container.CARds {
+  width: 95% !important;
+}
+
+
+// ===== HEADER STYLES =====
+.header-title {
+  color: $title-color; // Ensure this variable is defined in variables.scss
+  font-size: 1.4rem;
+}
+
+// ===== CARD STYLES =====
+
+.card-text {
+  font-size: $font-size-md;
+  padding-top: 5px;
+  color: $title-color;
+}
+
+.alert-message {
+  padding: 10px;
+  background-color: #f44336;
+  /* Red */
+  color: white;
+  margin-bottom: 15px;
+  display: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.alert-message.show {
+  display: block;
+}
+
+.selected-cards-container {
+  width: 90%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selected-cards-title {
+  font-size: 1.25em;
+  /* Adjust as needed */
+  color: #333;
+  /* Adjust as needed */
+}
+
+.selected-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.selected-card {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.resendButton {
+  position: absolute;
+  bottom: 14%;
+  border: none;
+  outline: none;
+  color: red;
+  font-family: "Yekan Bakh";
+  background: transparent;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.selected-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.selected-card p {
+  margin: 5px 0 0 0;
+  /* Adjust as needed */
+  font-size: 0.9em;
+  /* Adjust as needed */
+  color: #333;
+  /* Adjust as needed */
+}
+
+
+.end-btn {
+  width: 50%;
+  margin: 2rem auto 0 auto;
+  background-color: #D9D9D9;
+  border-radius: 25px;
+  color: #737373;
+  font-family: $font-family-primary;
+  padding: 5px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-result-icon {
+  font-size: 1.8rem;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.alert-message {
+  position: absolute;
+  top: 0;
+
+}
+
+
+// LOGO 
+.userLogo {
+  width: 100px;
+}
+
+.loginFormInput {
+  width: 300px;
+  padding: 15px 0;
+  border-radius: $btn-radius;
+  border: none;
+  outline: none;
+  direction: rtl;
+  background-color: $inputBg;
+  text-align: center;
+  font-family: $font-family-primary;
+  color: $input-text-color;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.loginFormInput:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Add a box-shadow effect when input is focused */
+}
+
+.loginButton {
+  width: 200px;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $btn-radius;
+  background-color: $light-blue;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 10px 0px rgba(167, 167, 167, 0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  color: $primary-white;
+  text-decoration: none;
+  font-size: $font-size-md;
+  text-decoration: none;
+  font-family: $font-family-primary;
+  /* Add a transition effect */
+}
+
+.loginButton:hover {
+  transform: scale(1.1);
+  /* Scale up the button on hover */
+}
+
+.loginButton a {
+  color: $primary-white;
+  text-decoration: none;
+  font-size: $font-size-md;
+  text-decoration: none;
+  font-family: $font-family-primary;
+}
+
+// FILTER STYLES
+.filter-header {
+  width: 90%;
+  margin: 1rem auto 1.5rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-title {
+  width: 90%;
+  font-size: $font-size-md;
+  color: $title-color;
+  margin-bottom: .5rem;
+  direction: rtl;
+  font-weight: 600;
+  text-align: center;
+}
+
+.filter-text {
+  width: 90%;
+  font-size: $font-size-xs;
+  color: $text-color;
+  margin: 0 auto;
+  direction: rtl;
+  font-weight: 500;
+}
+
+.filter-buttons {
+  width: 310px;
+  margin: 1rem auto 2rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px $text-color solid;
+  border-radius: $btn-radius;
+  padding: 5px 5px;
+}
+
+
+.filter-btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-family: "Yekan Bakh";
+  position: relative;
+}
+
+.filter-btn:nth-child(2)::before,
+.filter-btn:nth-child(1)::before {
+  position: absolute;
+  content: "";
+  border-right: 1px solid $text-color;
+  height: 60%;
+  right: -.2rem;
+}
+
+.filter-img {
+  margin: 10px;
+}
+
+.rule-header {
+  text-align: center;
+  font-family: "Yekan Bakh";
+  margin-bottom: 1.5rem;
+}
+
+.rule-title {
+  font-size: 1.5rem;
+  color: $light-blue;
+}
+
+.rule-preTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $title-color;
+  margin: .4rem 0 .8rem 0;
+}
+
+.rule-text {
+  direction: rtl;
+  font-size: 14px;
+  color: $text-color;
+}
+
+.swiper {
+  width: 240px;
+  height: 300px;
+}
+
+.swiper-slide {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.rule-card {
+  width: 230px !important;
+  height: 280px !important;
+  border: 5px solid #BDE1F6;
+  border-radius: $btn-radius;
+  background-color: #fff;
+  display: flex !important;
+  // flex-direction: column !important;
+  // justify-content: center !important;
+  // align-items: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.rule-card:nth-child(1)::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url("/src/assets/images/ruleOne.svg");
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.rule-card:nth-child(2)::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url("/src/assets/images/ruleTwo.svg");
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.rule-card:nth-child(3)::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url("/src/assets/images/ruleThree.svg");
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.rule-card:nth-child(4)::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: url("/src/assets/images/ruleFour.svg");
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.card-title {
+  font-size: 2rem;
+  color: $title-color;
+  border-bottom: 2px solid $light-blue;
+  direction: rtl;
+  margin-top: 60px;
+}
+
+.card-text {
+  font-size: 18px;
+  color: $title-color;
+  line-height: 19px;
+  direction: rtl;
+  display: flex;
+  height: inherit;
+  align-items: center;
+
+}
+
+.home-btn {
+  width: 150px;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: $light-blue;
+  border-radius: $btn-radius;
+  border: none;
+  outline: none;
+  margin: 1.5rem 0 .5rem 0;
+  font-family: "Yekan Bold2X";
+  text-decoration: none;
+}
+
+.string-btn {
+  background-color: #535251 !important;
+  z-index: 2;
+}
+
+.learn-light {
+  background-color: #6B450F !important;
+}
+
+.peace-light {
+  background-color: #E26D2E !important;
+}
+
+.grow-btn {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.game-icon_text {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Yekan Bakh";
+  font-weight: 500;
+  // word-spacing: 5px;
+}
+
+.resendButton.resendLoginCode {
+  bottom: 6%;
+  font-weight: 500;
+}

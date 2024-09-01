@@ -1,0 +1,55 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+@font-face {
+  font-family: 'YR';
+  src: url('./assets/fonts/YekanBakh-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "YB";
+  src: url('./assets/fonts/YekanBakh-Bold.ttf');
+}
+a {
+  font-weight: 500;
+  color: #cecece;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+a:hover {
+  color: #898989;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "YR" !important;
+  direction: rtl;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+button:hover {
+  border-color: #cecece;
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+}

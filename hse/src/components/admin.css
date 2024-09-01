@@ -1,0 +1,140 @@
+.admin {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ced4da;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.delete-btn {
+  background-color: #df0d22; /* Dark red */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-right: 15px;
+}
+
+.delete-btn:hover {
+  background-color: #aa1b27; /* Darker red on hover */
+}
+
+.confirmation-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-btn, .cancel-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover, .cancel-btn:hover {
+  background-color: #0056b3;
+}
+
+.success-notification {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.add-user-form {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-user-form h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.add-user-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.add-user-form input {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.add-user-form button {
+  width: 20%;
+  padding: 12px;
+  background-color: #4CAF50; /* Green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-user-form button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Add these styles to your CSS file */
+
+.won {
+  background-color: #aaffaa; /* Light green background for won games */
+}
+
+.lost {
+  background-color: #ffaaaa; /* Light red background for lost games */
+}
+
+.won-status {
+  color: #009900; /* Dark green text for won games */
+}
+
+.lost-status {
+  color: #ff0000; /* Dark red text for lost games */
+}

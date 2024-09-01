@@ -1,0 +1,122 @@
+.boxNotificationLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Updated z-index */
+}
+
+.boxNotification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Updated z-index */
+  width: 280px;
+  height: 200px;
+  border-radius: 10px !important;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+}
+
+.boxNotificationHeader {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d09686;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+}
+.boxNotificationChoice {
+  margin: 10px 0;
+  background-color: #fff;
+  width: 85%;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 400;
+  border-radius: 10px;
+}
+.boxNotificationChoice:nth-child(2) {
+  margin: 18px 0 10px 0;
+}
+
+.boxNotificationQuestion1 {
+  background-color: #dbd3b6;
+}
+
+.boxNotificationQuestion2 {
+  background-color: #a5bac1;
+}
+
+@media screen and (max-width: 400px) {
+  .boxNotification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Updated z-index */
+    width: 250px;
+    height: 175px;
+    border-radius: 10px !important;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+  }
+  
+  .boxNotificationHeader {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d09686;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+  }
+  .boxNotificationChoice {
+    margin: 10px 0;
+    background-color: #fff;
+    width: 85%;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: 400;
+    border-radius: 10px;
+    font-size: .9rem;
+  }
+  .boxNotificationChoice:nth-child(2) {
+    margin:  12px 0 10px 0;
+  }
+  
+  .boxNotificationQuestion1 {
+    background-color: #dbd3b6;
+  }
+  
+  .boxNotificationQuestion2 {
+    background-color: #a5bac1;
+  }
+}
+
+/* Add any additional styling as needed */

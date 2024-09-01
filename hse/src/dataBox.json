@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "content": {
+      "title": "Box 1",
+      "description": "This is the information for Box 1."
+    }
+  },
+  {
+    "id": 2,
+    "content": {
+      "title": "Box 2",
+      "description": "This is the information for Box 2."
+    }
+  }
+]
